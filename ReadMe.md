@@ -36,3 +36,16 @@ de aquí reconfiguramos index.ios.js para correr la aplicación.
 vamos a agregar nuestras tareas en un componente aparte.
 **ToDoList** que será el encargado de listar los _ToDo's_
 Como se vé el es obtiene las propiedades que el **Container** le envia por medio de sus propiedades.
+
+
+<hr>
+
+## Paso 4
+Se agrega un ponente Item que será cada To-Do
+
+vamos a usar [renderrow de RN](https://facebook.github.io/react-native/docs/listview.html#renderrow)
+aquí nos indica que tenemos los siquientes metodos
+
+ `(rowData, sectionID, rowID, highlightRow)`
+
+También es esta sección manejaremos los metodos de presionar el _To-Do_ desde el contenedor para poder añadir nuevos _To-Do's_ en un futuro.
