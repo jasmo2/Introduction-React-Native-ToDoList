@@ -14,3 +14,18 @@ Los comandos que debemos correr son:
 
 `react-native run-ios`
 <hr>
+
+## Paso 2
+
+Por ahora estructuremos nuestro proyecto:
+agremos una carpeta llamada **src** y dentro otra carpeta llamada components donde crearemos todos los componentes necesarios para la aplicación.
+
+
+    |-- todoList
+      |-- src
+        |-- styles
+        |-- components
+ahora procedamos a crear nuestro primer componente:
+**container.js**
+
+de aquí reconfiguramos index.ios.js para correr la aplicación.
