@@ -29,3 +29,10 @@ ahora procedamos a crear nuestro primer componente:
 **container.js**
 
 de aquí reconfiguramos index.ios.js para correr la aplicación.
+
+<hr>
+
+## Paso 3
+vamos a agregar nuestras tareas en un componente aparte.
+**ToDoList** que será el encargado de listar los _ToDo's_
+Como se vé el es obtiene las propiedades que el **Container** le envia por medio de sus propiedades.
