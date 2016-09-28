@@ -49,3 +49,19 @@ aquí nos indica que tenemos los siquientes metodos
  `(rowData, sectionID, rowID, highlightRow)`
 
 También es esta sección manejaremos los metodos de presionar el _To-Do_ desde el contenedor para poder añadir nuevos _To-Do's_ en un futuro.
+
+
+<hr>
+
+## Paso 5
+
+En este paso nos aproximamos a la creación de nuestro To-Do List.
+
+Agregaremos un último componente que será el encargado edición y creación de items.  TAmbién usaremos una librería externa llamada [tcomb-form-native](https://github.com/gcanti/tcomb-form-native) la cual debemos instalar con:
+
+`npm install tcomb-form-native`
+
+
+esta nos servirá para realizar validaciones posteriormente.
+
+También realizaremos unos cambios en la navegación para poder pasar los argumentos de nuestros _To-Do's_
