@@ -1,6 +1,5 @@
 import styles from '../styles/styles';
 import React, { Component } from 'react';
-let _ = require('underscore')
 
 import {
   View,
