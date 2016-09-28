@@ -2,17 +2,19 @@ import styles from '../styles/styles';
 import React, { Component } from 'react';
 import { Text, View, TouchableHighlight, Alert, Navigator } from 'react-native';
 import ToDoList from './toDoList';
+import ToDoEdit from './editToDo';
 
 class Container extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
+      items: this.props.items || [
         {txt: '¡Aprendamos react native!', complete: false},
         {txt: 'To-Doing it', complete: true}
       ]
     };
   }
+
   alertMenu(rowData, rowID) {
     Alert.alert(
       'Quick Menu',
@@ -20,10 +22,12 @@ class Container extends Component {
     )
   }
   openItem(rowData, rowID) {
-    Alert.alert(
-      'tap',
-      'tap tap.. tap'
-    )
+    this.props.nav.push({
+            index: 1,
+            title: rowData && rowData.txt || 'Nuevo To-Do',
+            component: ToDoEdit,
+            passProps: {item: rowData, items: this.state.items,id: rowID}
+    });
   }
   render() {
     return (
@@ -36,7 +40,7 @@ class Container extends Component {
         <TouchableHighlight
           style={[styles.button, styles.newButton]}
           underlayColor='#99d9f4'
-          onPress={this.openItem}>
+          onPress={this.openItem.bind(this)}>
           <Text style={styles.buttonText}>+</Text>
         </TouchableHighlight>
       </View>
